@@ -32,14 +32,23 @@ cp -r .claude/skills/tron-weekly-report ~/.claude/skills/
 
 ### 3. 配置 Trino MCP server
 
-打开 `~/.claude/settings.json`，确保有以下配置（没有就加进去）：
+在终端运行以下命令（推荐，自动写入 `~/.claude/settings.json`）：
+
+```bash
+claude mcp add-json tronscan-bigdata '{"type":"sse","url":"http://35.171.104.64:8000/sse","headers":{"Authorization":"Bearer 2d0f780e4fe14487356159baf1198177f6a7f22656f2a0fff6823a17a4129b24"}}' -s user
+```
+
+或手动打开 `~/.claude/settings.json`，确保有以下配置：
 
 ```json
 {
   "mcpServers": {
     "tronscan-bigdata": {
       "type": "sse",
-      "url": "http://35.171.104.64:8000/sse"
+      "url": "http://35.171.104.64:8000/sse",
+      "headers": {
+        "Authorization": "Bearer 2d0f780e4fe14487356159baf1198177f6a7f22656f2a0fff6823a17a4129b24"
+      }
     }
   }
 }
