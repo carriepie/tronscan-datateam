@@ -88,7 +88,7 @@ cp -r .claude/skills/tron-weekly-report ~/.claude/skills/
 
 ## 协作流程
 
-### Carrie 更新 skill 后同步给团队
+### 成员更新 skill 后同步给团队（以tron-weekly-report为例）
 
 ```bash
 cd ~/tronscan-datateam
@@ -121,8 +121,3 @@ git commit -m "Add/Update 你的skill名"
 git push
 ```
 
----
-
-## 联系
-
-有问题找 Carrie（@carriepie）
